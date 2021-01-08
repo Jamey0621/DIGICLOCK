@@ -1,0 +1,29 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="465" AllowsTransparency="True" Background="Transparent" WindowStyle="None" Loaded="Window_Loaded" >
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="450"></WindowChrome>
+    </WindowChrome.WindowChrome>
+    
+    <Border CornerRadius="360" BorderBrush="#ffdf66" BorderThickness="5" Background="#202030">
+        <StackPanel WindowChrome.IsHitTestVisibleInChrome="True">
+            <Label Foreground="#ffdf66" Margin="120,15,130,0" FontSize="35" FontFamily="Stormfaze" HorizontalAlignment="Center" Height="65" Width="205" Content="DIGICLOCK"/>
+            <StackPanel Background="#3f3f46" Margin="0,20,0,5" Width="380" Height="180">
+                <Label Name="timelbl" Margin="0,20,0,0" Foreground="#ffdf66" FontSize="50" FontFamily="Stormfaze" HorizontalAlignment="Center">00:00:00</Label>
+            </StackPanel>
+            <StackPanel Background="#3f3f46"  Width="380" Height="80">
+                <Label x:Name="datelbl" Margin="66,20,66,0" Foreground="#ffdf66" FontSize="30" FontFamily="Stormfaze" HorizontalAlignment="Center" Content="00.00.0000"/>
+            </StackPanel>
+            <Button Width="60" Padding="5,5,5,5" Background="#ffdf66" FontSize="16" FontFamily="Stormfaze" Foreground="#333333" BorderThickness="0" Name="QutieBtn" Click="QutieBtn_Click">
+                Exit
+            </Button>
+        </StackPanel>
+        
+    </Border>
+</Window>
